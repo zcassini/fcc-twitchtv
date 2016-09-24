@@ -1,3 +1,5 @@
 require('./stylus/style.styl')
-require('./js/main.js')
+// var $ = require('jquery')
+// import $ from 'jquery'
 
+require('./js/main.js')
