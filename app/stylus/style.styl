@@ -1,7 +1,51 @@
-@import 'yeticss'
 my_favorite_color = #00CEFF
+$fa-font-path = '/node_modules/font-awesome-stylus/fonts'
+@import '../../node_modules/font-awesome-stylus/stylus/index.styl'
+@import 'yeticss'
+
+// Palette URL: http://paletton.com/#uid=13w0u0kllllaFw0g0qFqFg0w0aF 
+color-primary-0 = #29516D	// Main Primary color */
+color-primary-1 = #708EA4
+color-primary-2 = #486E88
+color-primary-3 = #123752
+color-primary-4 = #032137
 
 body
-  background my_favorite_color
+  background $blue-light
 
- 
+.container
+  max-width 920px
+
+.searchmatch
+  color red
+
+.panel
+  background $gray-lighter
+  margin 10px auto
+  padding 0 20px 0 20px
+
+.title
+  margin 10px 0 10px 0
+
+.snippet
+  margin 0 0 10px 0
+.form
+  margin 0 auto
+  width 100%
+
+#searchbox
+  width 100%
+  padding 0px 0px 0px 0px
+  margin 0
+
+.header
+  text-align center
+  width 100%
+
+button.button.bg
+  width 100%
+  margin 0
+  padding 0px 0px 0px 30px
+
+div.grid-flex-cell.hund
+  padding 0px 0px 0px 30px

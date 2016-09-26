@@ -1,6 +1,14 @@
-include includes/header
+//include includes/header
 
 body
-    h1 Ahhhhhhhhhhhhhhhhhh Twitch
-    #jsonp-response
-    
+  .container
+    .grid-flex-container
+      .grid-flex-cell.header
+        h1 Wikipedia Viewer
+    .grid-flex-container
+      .grid-flex-cell.hund
+        input.form-input#searchbox(type='text')
+    .grid-flex-container
+      .grid-flex-cell.hund
+        button.button.bg#random Random Article
+    #results
