@@ -433,12 +433,9 @@
 	      var title = '<h5 class="title">' + jsonp[1][i] + '</h5>';
 	      var summary = '<p class="snippet">' + jsonp[2][i] + '</p>';
 	      urls.push(jsonp[3][i]);
-	      var link = jsonp[3][i];
-	      // var link = json[3][i]
 	      (0, _jquery2.default)('#results').append('<div class="grid-flex-container panel" id="' + i + '">' + title + '<br />' + summary + '</div>');
 	      (0, _jquery2.default)('#' + i).on('click', function () {
-	        // openWin(urls[$(this).attr('id')])//, '_blank')
-	        openWin(link);
+	        openWin(urls[(0, _jquery2.default)(this).attr('id')]); //, '_blank')
 	      });
 	    }
 	  });
