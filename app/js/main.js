@@ -5,10 +5,10 @@ var randomUrl = 'https://en.wikipedia.org/wiki/Special:Random'
 var urls = []
 
 $('document').ready(function () {
-  $('#searchbox').keypress(function(e) {
+  $('#searchbox').keypress(function (e) {
     if (e.keyCode === 13) search(e.target.value)
   })
-  $('#random').click(function() {
+  $('#random').click(function () {
     openWin(randomUrl)
   })
 })
@@ -18,16 +18,13 @@ function search (searchTerm) {
   urls = []
 
   $.getJSON(url + searchTerm, function (jsonp) {
-    for(var i = 0; i < jsonp[1].length; i++) {
+    for (var i = 0; i < jsonp[1].length; i++) {
       var title = '<h5 class="title">' + jsonp[1][i] + '</h5>'
       var summary = '<p class="snippet">' + jsonp[2][i] + '</p>'
       urls.push(jsonp[3][i])
-      var link = jsonp[3][i] 
-      // var link = json[3][i]
       $('#results').append('<div class="grid-flex-container panel" id="' + i + '">' + title + '<br />' + summary + '</div>')
       $(`#${i}`).on('click', function () {
-        // openWin(urls[$(this).attr('id')])//, '_blank')
-        openWin(link)
+        openWin(urls[$(this).attr('id')])//, '_blank')
       })
     }
   })
